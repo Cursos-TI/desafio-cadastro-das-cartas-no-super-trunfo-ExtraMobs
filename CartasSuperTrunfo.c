@@ -1,10 +1,15 @@
 #include <stdio.h> 
 
-struct Carta
+// Eu tentei pensar em um jeito de não usar typedef,
+// porém esse foi o melhor jeito de representar a
+// estrutura exigida pelo enunciado, afinal a 
+// linguagem C não possui conceito de herança.
+
+typedef struct
 {
     char estado;
     char codigo_carta[3];
-};
+} Carta;
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
