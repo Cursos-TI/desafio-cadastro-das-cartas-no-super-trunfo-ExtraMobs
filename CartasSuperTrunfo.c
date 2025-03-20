@@ -7,9 +7,11 @@
 
 typedef struct
 {
-    char estado;
-    char codigo_carta[3];
+    char estado; // A - H
+    int cidade; // 01 - 04
+    char codigo_carta[3]; // estado + cidade
 } CartaId;
+
 // Pelo o que pesquisei, esse é o jeito
 // mais utilizado pela comunidade para representar
 // um typedef, com o nome ao final da declaração.
@@ -18,6 +20,14 @@ typedef struct
 // código escrito, podendo "construir" a estrutura,
 // parecido com as linguagens de mais alto nível.
 
+typedef struct
+{
+    CartaId id;
+    int populacao;
+    float area;
+    float pib;
+    int pontos_turisticos;
+} CartasSuperTrunfo;
 
 
 // Desafio Super Trunfo - Países
