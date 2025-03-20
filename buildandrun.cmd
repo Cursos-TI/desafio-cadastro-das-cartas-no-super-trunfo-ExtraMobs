@@ -1,4 +1,4 @@
 @echo off
 cls
-gcc main.c -o main.exe
-main.exe
+gcc CartasSuperTrunfo.c -o CartasSuperTrunfo.exe
+CartasSuperTrunfo.exe
