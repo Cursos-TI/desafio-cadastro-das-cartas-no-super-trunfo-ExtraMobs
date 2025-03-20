@@ -9,7 +9,17 @@ typedef struct
 {
     char estado;
     char codigo_carta[3];
-} Carta;
+} CartaId;
+// Pelo o que pesquisei, esse é o jeito
+// mais utilizado pela comunidade para representar
+// um typedef, com o nome ao final da declaração.
+
+// o typedef é o comando que ajuda muito a reduzir
+// código escrito, podendo "construir" a estrutura,
+// parecido com as linguagens de mais alto nível.
+
+
+
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
