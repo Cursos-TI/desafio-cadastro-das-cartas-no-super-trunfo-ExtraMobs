@@ -40,20 +40,21 @@ CartaSuperTrunfo novaCarta(char estado, int cidade, int populacao, float area, f
 }
 
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
 int main() {
-    CartaSuperTrunfo carta01 = {
-        .id = {'A', 1},
-        .populacao = 1000000,
-        .area = 500.5,
-        .pib = 20000.0,
-        .pontos_turisticos = 10
-    };
-
+    CartaSuperTrunfo carta01 = novaCarta(
+        'A', 1, // Estado A, Cidade 01
+        1000000, // População
+        500.5, // Área
+        20000.0, // PIB
+        10 // Pontos turísticos
+    );
+    
+    CartaSuperTrunfo carta02 = novaCarta(
+        'B', 2, // Estado B, Cidade 02
+        2000000, // População
+        750.0, // Área
+        30000.0, // PIB
+        15 // Pontos turísticos
+    );
     return 0;
 }
