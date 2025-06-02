@@ -40,6 +40,16 @@ CartaSuperTrunfo novaCarta(char estado, int cidade, int populacao, float area, f
 }
 
 
+void printCarta(CartaSuperTrunfo carta) {
+    printf("\n\nCarta Super Trunfo:\n");
+    printf("Carta: %s\n", carta.id.codigo_carta);
+    printf("Populacao: %d\n", carta.populacao);
+    printf("Area: %.2f\n", carta.area);
+    printf("PIB: %.2f\n", carta.pib);
+    printf("Pontos turisticos: %d\n", carta.pontos_turisticos);
+}
+
+
 int main() {
     CartaSuperTrunfo carta01 = novaCarta(
         'A', 1, // Estado A, Cidade 01
@@ -48,7 +58,7 @@ int main() {
         20000.0, // PIB
         10 // Pontos turísticos
     );
-    
+
     CartaSuperTrunfo carta02 = novaCarta(
         'B', 2, // Estado B, Cidade 02
         2000000, // População
@@ -56,5 +66,9 @@ int main() {
         30000.0, // PIB
         15 // Pontos turísticos
     );
+
+    printCarta(carta01);
+    printCarta(carta02);
+
     return 0;
 }
