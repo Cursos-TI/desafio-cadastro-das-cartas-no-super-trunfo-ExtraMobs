@@ -12,6 +12,17 @@ typedef struct
     char codigo_carta[3]; // estado + cidade
 } CartaId;
 
+CartaId novoId(char estado, int cidade) {
+    CartaId id;
+    id.estado = estado;
+    id.cidade = cidade;
+
+    // snprintf formata uma 'string(charset)' com base em uma formatação.
+    snprintf(id.codigo_carta, sizeof(id.codigo_carta), "%c%02d", estado, cidade);
+
+    return id;
+}
+
 // Pelo o que pesquisei, esse é o jeito
 // mais utilizado pela comunidade para representar
 // um typedef, com o nome ao final da declaração.
@@ -37,6 +48,13 @@ typedef struct
 //Teste larissa
 
 int main() {
+    CartasSuperTrunfo carta01 = {
+        .id = {'A', 1},
+        .populacao = 1000000,
+        .area = 500.5,
+        .pib = 20000.0,
+        .pontos_turisticos = 10
+    };
 
     return 0;
 }
