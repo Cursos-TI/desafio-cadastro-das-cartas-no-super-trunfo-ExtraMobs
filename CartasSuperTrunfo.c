@@ -1,9 +1,5 @@
 #include <stdio.h> 
 
-// Eu tentei pensar em um jeito de não usar typedef,
-// porém esse foi o melhor jeito de representar a
-// estrutura exigida pelo enunciado, afinal a 
-// linguagem C não possui conceito de herança.
 
 typedef struct
 {
@@ -23,14 +19,6 @@ CartaId novoId(char estado, int cidade) {
     return id;
 }
 
-// Pelo o que pesquisei, esse é o jeito
-// mais utilizado pela comunidade para representar
-// um typedef, com o nome ao final da declaração.
-
-// o typedef é o comando que ajuda muito a reduzir
-// código escrito, podendo "construir" a estrutura,
-// parecido com as linguagens de mais alto nível.
-
 typedef struct
 {
     CartaId id;
@@ -38,7 +26,18 @@ typedef struct
     float area;
     float pib;
     int pontos_turisticos;
-} CartasSuperTrunfo;
+} CartaSuperTrunfo;
+
+
+CartaSuperTrunfo novaCarta(char estado, int cidade, int populacao, float area, float pib, int pontos_turisticos){
+    CartaSuperTrunfo carta;
+    carta.id = novoId(estado, cidade);
+    carta.populacao = populacao;
+    carta.area = area;
+    carta.pib = pib;
+    carta.pontos_turisticos = pontos_turisticos;
+    return carta;
+}
 
 
 // Desafio Super Trunfo - Países
@@ -48,7 +47,7 @@ typedef struct
 //Teste larissa
 
 int main() {
-    CartasSuperTrunfo carta01 = {
+    CartaSuperTrunfo carta01 = {
         .id = {'A', 1},
         .populacao = 1000000,
         .area = 500.5,
